@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="879.0" style="-fx-background-color: #008080;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EspaceSpecialisteController">
+    <stylesheets>
+        <URL value="@/content/espaceadmin.css" />
+    </stylesheets>
+    <children>
+        <ImageView fx:id="image2" fitHeight="85.0" fitWidth="500.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="406.3333333333333" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="581.6589139302572" AnchorPane.topAnchor="6.0">
+            <image>
+                <Image url="@../content/doctor-5.jpg" />
+            </image>
+        </ImageView>
+        <TabPane layoutY="99.0" prefHeight="445.0" prefWidth="879.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Mes rendez-vous">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tableRdv" prefHeight="339.0" prefWidth="635.0">
+                                    <columns>
+                                        <TableColumn fx:id="ColumnNomClient" prefWidth="127.0" text="Nom client" />
+                                        <TableColumn fx:id="ColumnDate" prefWidth="127.0" text="Date rendez-vous" />
+                                        <TableColumn fx:id="ColumnHeure" prefWidth="127.0" text=" Heure rendez-vous" />
+                                        <TableColumn fx:id="ColumnEtat" prefWidth="127.0" text="Etat" />
+                                        <TableColumn fx:id="ColummnEdit" prefWidth="127.0" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="categorie" text="Mes clients">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tableUser" prefHeight="339.0" prefWidth="635.0">
+                                    <columns>
+                                        <TableColumn fx:id="ColumnEmail" prefWidth="158.75" text="Adresse E-mail" />
+                                        <TableColumn fx:id="ColumnNom" prefWidth="158.75" text=" Nom et Prénom" />
+                                        <TableColumn fx:id="ColumnNumTel" prefWidth="158.75" text="Numéro de téléphone" />
+                                        <TableColumn fx:id="ColumnAdresse" prefWidth="158.75" text="Adresse" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Paramétrer calendrier">
+               <content>
+                  <TabPane prefHeight="380.0" prefWidth="879.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Disponibilité">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="879.0">
+                                 <children>
+                                    <Label fx:id="DureeLabel" layoutX="14.0" layoutY="37.0" />
+                                    <JFXComboBox fx:id="DureeCB" layoutX="21.0" layoutY="68.0" prefHeight="28.0" prefWidth="113.0" promptText="Durée" />
+                                    <JFXButton fx:id="ValiderDuree" layoutX="158.0" layoutY="70.0" onAction="#ValiderDuree" text="Valider" />
+                                    <JFXComboBox fx:id="JourCB" layoutX="34.0" layoutY="159.0" />
+                                    <Label layoutX="34.0" layoutY="138.0" text="Horaire" />
+                                    <JFXComboBox fx:id="HeureDebutCB" layoutX="296.0" layoutY="159.0" />
+                                    <JFXComboBox fx:id="HeureFinCB" layoutX="466.0" layoutY="159.0" />
+                                    <Label layoutX="215.0" layoutY="170.0" text="de">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="413.0" layoutY="170.0" text="à">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="AjouterTempsTravil" layoutX="250.0" layoutY="211.0" onAction="#AjouterTempsTravil" text="Ajouter" />
+                                    <Label layoutX="682.0" layoutY="72.0" text="Temps de travail" />
+                                    <TableView fx:id="tableTempsTravail" layoutX="592.0" layoutY="95.0" prefHeight="177.0" prefWidth="278.0">
+                                      <columns>
+                                        <TableColumn fx:id="ColumnJour" prefWidth="83.3333740234375" text="Jour" />
+                                        <TableColumn fx:id="ColumnHeureDebut" prefWidth="104.6666259765625" text="Heure Debut" />
+                                          <TableColumn fx:id="ColumnHeureFin" prefWidth="89.3333740234375" text="Heure Fin" />
+                                      </columns>
+                                    </TableView>
+                                    <JFXButton fx:id="SupprimerTempsTravail" layoutX="682.0" layoutY="281.0" onAction="#SupprimerTempsTravail" text="Supprimer" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Jours de congé">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <DatePicker fx:id="DateDebutTP" layoutX="60.0" layoutY="28.0" prefHeight="26.0" prefWidth="229.0" />
+                                    <DatePicker fx:id="DateFinTP" layoutX="390.0" layoutY="28.0" prefHeight="26.0" prefWidth="232.0" />
+                                    <Label layoutX="15.0" layoutY="32.0" text="De" />
+                                    <Label layoutX="326.0" layoutY="32.0" text="à" />
+                                    <JFXButton fx:id="AjouterConge" layoutX="694.0" layoutY="25.0" onAction="#AjouterConge" prefHeight="32.0" prefWidth="75.0" text="Ajouter" />
+                                    <Label layoutX="294.0" layoutY="130.0" text="Temps de travail" />
+                                    <TableView fx:id="tableConge" layoutX="233.0" layoutY="81.0" prefHeight="163.0" prefWidth="200.0">
+                                      <columns>
+                                        <TableColumn fx:id="ColumnDateDebut" prefWidth="94.66667175292969" text="Date Debut " />
+                                        <TableColumn fx:id="ColumnDateFin" prefWidth="103.33331298828125" text="Date Fin" />
+                                      </columns>
+                                    </TableView>
+                                    <JFXButton fx:id="SupprimerConge" layoutX="291.0" layoutY="252.0" onAction="#SupprimerConge" text="Suuprimer" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Label layoutX="197.0" layoutY="27.0" text="Espace Spécialiste" textFill="WHITE">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

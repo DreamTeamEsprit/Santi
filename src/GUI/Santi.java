@@ -5,12 +5,10 @@
  */
 package GUI;
 
+import java.io.IOException;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -18,27 +16,45 @@ import javafx.stage.Stage;
  * @author Heythem
  */
 public class Santi extends Application {
-    
+
+    private Stage stage;
+    private static Santi instance;
+    private Scene scene;
+
+    public Santi() throws IOException, InterruptedException {
+        instance = this;
+        scene = new Scene(FXMLLoader.load(getClass().getResource("Choixrdv.fxml")));
+
+    }
+
+    public static Santi getInstance() {
+        return instance;
+    }
+
+    public Stage getStage() {
+        return stage;
+    }
+
     @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    public void start(Stage stage) throws Exception {
+        //Parent root = FXMLLoader.load(getClass().getResource("Recherche.fxml"));
+
+        this.stage = stage;
+        stage.setScene(this.scene);
+        //stage.setFullScreen(true);
+        //stage.setMaximized(true);
+        stage.setWidth(1000);
+        stage.setHeight(650);
+        stage.centerOnScreen();
+
+        stage.show();
+    }
+
+    public void changescene(Scene scene) {
+        this.scene = scene;
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
     }
 
     /**
@@ -47,5 +63,5 @@ public class Santi extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

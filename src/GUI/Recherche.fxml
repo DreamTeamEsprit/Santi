@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxWidth="1319.0" prefHeight="700.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RechercheController">
+    <children>
+        <JFXTextField fx:id="NomTF" layoutX="38.0" layoutY="81.0" prefHeight="25.0" prefWidth="135.0" promptText="Nom" />
+        <JFXTextField fx:id="VilleTF" layoutX="527.0" layoutY="81.0" promptText="Ville" />
+        <JFXComboBox fx:id="ServiceCB" layoutX="225.0" layoutY="81.0" promptText="Activité : Médecin, Généraliste..." />
+        <JFXButton fx:id="RechercherBtn" buttonType="RAISED" layoutX="721.0" layoutY="81.0" onAction="#Rechercher" ripplerFill="#d9534f" text="Rechercher" />
+        <TableView fx:id="tableRecherche" layoutX="18.0" layoutY="141.0" prefHeight="200.0">
+            <columns>
+                <TableColumn fx:id="ColumnNom" prefWidth="114.66666221618652" text="Nom" />
+                <TableColumn fx:id="ColumnService" prefWidth="261.3333282470703" text="Département/Service" />
+                <TableColumn fx:id="ColumnVille" prefWidth="117.33334350585938" text="Ville" />
+            </columns>
+        </TableView>
+      <Label layoutX="463.0" layoutY="85.0" onMouseClicked="#ClearCB" text="x" />
+      <GoogleMapView fx:id="mapView" layoutX="699.0" layoutY="141.0" prefHeight="491.0" prefWidth="380.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </GoogleMapView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="879.0" style="-fx-background-color: #008080;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EspaceClientController">
+    <stylesheets>
+        <URL value="@/content/espaceadmin.css" />
+    </stylesheets>
+    <children>
+        <ImageView fx:id="ImageUser" fitHeight="85.0" fitWidth="500.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="406.3333333333333" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="581.6589139302572" AnchorPane.topAnchor="6.0">
+            <image>
+                <Image url="@../content/doctor-5.jpg" />
+            </image>
+        </ImageView>
+        <TabPane layoutY="99.0" prefHeight="445.0" prefWidth="879.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Mes rendez-vous">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tableRdv" prefHeight="339.0" prefWidth="635.0">
+                                    <columns>
+                                        <TableColumn fx:id="ColumnDateRdv" prefWidth="127.0" text="Date rendez-vous" />
+                                        <TableColumn fx:id="ColumnHeureRdv" prefWidth="127.0" text="Heure rendez-vous" />
+                                        <TableColumn fx:id="ColumnNomSpecialisteRdv" prefWidth="127.0" text=" Nom spécialiste" />
+                                        <TableColumn fx:id="ColumnService" prefWidth="127.0" text="spécialité" />
+                                        <TableColumn fx:id="ColumnEtat" prefWidth="127.0" text=" Etat" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Mes spécialistes">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tableSpecialiste" prefHeight="339.0" prefWidth="635.0">
+                                    <columns>
+                                        <TableColumn fx:id="ColumnNomSpecialiste" prefWidth="158.75" text=" Nom et Prénom" />
+                                        <TableColumn fx:id="ColumnDomaineSpecialiste" prefWidth="158.75" text="Domaine / Spécialité" />
+                                        <TableColumn fx:id="ColumnNumTel" prefWidth="158.75" text="Téléphone" />
+                                        <TableColumn fx:id="ColumnAdresse" prefWidth="158.75" text="Adresse" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Suggérer specialiste" />
+            </tabs>
+        </TabPane>
+        <Label layoutX="197.0" layoutY="27.0" text="Espace Client" textFill="WHITE">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

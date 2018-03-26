@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="777.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChoixrdvController">
+    <stylesheets>
+        <URL value="@/content/choixrdv.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="27.0" onMouseClicked="#PreviousWeek" prefHeight="51.0" prefWidth="33.0" text="&lt;" textFill="#5bc0de">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="679.0" onMouseClicked="#NextWeek" prefHeight="51.0" prefWidth="33.0" text="&gt;" textFill="#5bc0de">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <TableView fx:id="Calendrier" layoutX="70.0" layoutY="21.0" prefHeight="200.0" prefWidth="600.0" style="-fx-border-color: #5bc0de;" stylesheets="@../content/choixrdv.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>
