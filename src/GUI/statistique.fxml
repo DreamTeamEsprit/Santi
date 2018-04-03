@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="654.0" style="-fx-background-color: #008080;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="controllers.StatistiqueController">
+    <stylesheets>
+        <URL value="@/content/statistique.css" />
+    </stylesheets>
+   <children>
+      <JFXDrawer fx:id="drawer" cache="true" cacheHint="SPEED" defaultDrawerSize="250.0" layoutX="10.0" layoutY="20.0" maxHeight="609.0" maxWidth="250.0" minHeight="600.0" minWidth="41.0" prefHeight="609.0" prefWidth="193.0" />
+      <ImageView fitHeight="93.0" fitWidth="288.0" layoutX="401.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/espace_admin.gif" />
+         </image>
+      </ImageView>
+      <PieChart fx:id="piechart" layoutX="207.0" layoutY="115.0" prefHeight="483.0" prefWidth="820.0" title="Produit / Quantite Dispo" />
+      <JFXHamburger fx:id="hamburger" cache="true" cacheHint="SPEED" focusTraversable="true" layoutX="183.0" layoutY="20.0" prefHeight="65.0" prefWidth="80.0" stylesheets="@../content/styleHamburger.css">
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXHamburger>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane1" prefHeight="581.0" prefWidth="780.0" style="-fx-background-color: #87CEEB;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+    <stylesheets>
+        <URL value="@/content/login.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="185.0" fitWidth="737.0" layoutX="23.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/Santé-Bioen-être-e1386603807874.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="181.0" layoutY="276.0" prefHeight="30.0" prefWidth="90.0" text="Login">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="184.0" layoutY="390.0" text="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="login" layoutX="306.0" layoutY="276.0" prefHeight="25.0" prefWidth="166.0" />
+      <JFXPasswordField fx:id="password" layoutX="306.0" layoutY="386.0" prefHeight="25.0" prefWidth="173.0" />
+      <JFXButton fx:id="loginbutton" layoutX="572.0" layoutY="312.0" onAction="#loginbutton" prefHeight="65.0" prefWidth="135.0" text="Login" textFill="#208315">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#239a15" glyphName="CHECK" layoutX="687.0" layoutY="351.0" size="20.0" />
+   </children>
+</AnchorPane>

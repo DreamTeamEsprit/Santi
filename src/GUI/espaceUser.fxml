@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="612.0" prefWidth="990.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EspaceUserController">
+    <stylesheets>
+        <URL value="@/content/espaceuser.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="101.0" prefWidth="990.0" style="-fx-background-color: #7FFFD4;">
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="95.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/fichier-emails-paramedical.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="98.0" layoutX="905.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/40031fec.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="187.0" layoutY="5.0" prefHeight="93.0" prefWidth="492.0" text="Materiels Paramedical" textFill="#5c02f8">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-3.0" layoutY="101.0" prefHeight="517.0" prefWidth="182.0" style="-fx-background-color: #4682B4;">
+         <children>
+            <JFXComboBox fx:id="categorieCB" layoutX="14.0" layoutY="58.0" onAction="#rechercheparcategorie" prefHeight="25.0" prefWidth="146.0" promptText="     Notre Categorie" />
+            <FontAwesomeIconView fill="#bf4b4b" glyphName="POWER_OFF" layoutX="17.0" layoutY="477.0" size="30" wrappingWidth="39.0">
+               <effect>
+                  <Glow level="0.88" />
+               </effect>
+            </FontAwesomeIconView>
+            <JFXButton fx:id="deconnexion" layoutX="36.0" layoutY="448.0" onAction="#deconnexion" prefHeight="25.0" prefWidth="120.0" text="Déconnexion" textFill="#e86565">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="monpanier" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="117.0" onAction="#monpanier" prefHeight="50.0" prefWidth="158.0" ripplerFill="#d6b2fc" style="-fx-background-color: #4682B4;" textFill="#e4dbdb">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="167.0">
+                     <children>
+                        <FontAwesomeIconView fill="#e4dbdb" glyphName="EYE" size="30" wrappingWidth="39.0" />
+                        <Label prefHeight="38.0" prefWidth="132.0" text="Mon Panier" textFill="#e4dbdb">
+                           <font>
+                              <Font name="Roboto Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="nbr" layoutX="140.0" layoutY="92.0" prefHeight="50.0" prefWidth="56.0" textFill="#e4dbdb">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="siteweb" layoutX="-12.0" layoutY="317.0" onAction="#siteweb" prefHeight="30.0" prefWidth="199.0" text="Découvrir Notre Site Web" textFill="#8d0a0a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="101.0" fitWidth="174.0" layoutX="1.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/téléchargement.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXListView fx:id="List" layoutX="184.0" layoutY="200.0" prefHeight="418.0" prefWidth="364.0" />
+      <JFXTextField fx:id="recherchepr" layoutX="675.0" layoutY="130.0" onAction="#recherchepr" prefHeight="25.0" prefWidth="275.0" promptText="    Entrer Le nom du roduit que vous chercher" />
+      <Label layoutX="189.0" layoutY="111.0" prefHeight="53.0" prefWidth="120.0" text="Trier Par :" textFill="#2e06f8">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="pluschere" layoutX="317.0" layoutY="125.0" onAction="#pluschere" text="plus chère" textFill="#a80505" />
+      <JFXButton fx:id="moinschere" layoutX="466.0" layoutY="125.0" onAction="#moinschere" text="moins chère" textFill="#08a84d" />
+      <ImageView fitHeight="53.0" fitWidth="80.0" layoutX="398.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/rouge-vert-vers-le-bas-et-flèches-hautes-croissance-baisse-augmenter-diminution-52073203.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="panex" layoutX="561.0" layoutY="199.0" prefHeight="418.0" prefWidth="425.0">
+         <children>
+            <ImageView fx:id="imagex" fitHeight="161.0" fitWidth="375.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagex" fitHeight="173.0" fitWidth="375.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="labelxnom" layoutX="157.0" layoutY="182.0" prefHeight="45.0" prefWidth="249.0" textFill="#e80909">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelxprix" layoutX="81.0" layoutY="236.0" prefHeight="17.0" prefWidth="120.0" textFill="#b90e0e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelxremise" layoutX="262.0" layoutY="233.0" prefHeight="27.0" prefWidth="146.0" textFill="#bf1616">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="achteterbutton" layoutX="14.0" layoutY="327.0" prefHeight="45.0" prefWidth="211.0" textFill="#55b548">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="jaimebutton" layoutX="264.0" layoutY="328.0" prefHeight="44.0" prefWidth="142.0" textFill="#0711d0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="imagejaile" fitHeight="53.0" fitWidth="56.0" layoutX="301.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageacheter" fitHeight="53.0" fitWidth="71.0" layoutX="70.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="prixtextfield" layoutX="184.0" layoutY="164.0" prefHeight="25.0" prefWidth="56.0" promptText="Prix en DT" />
+      <JFXSlider fx:id="slider" blockIncrement="1.0" cache="true" cacheHint="SPEED" layoutX="259.0" layoutY="164.0" majorTickUnit="200.0" max="1000.0" minorTickCount="1" onMouseClicked="#makePrix" prefHeight="33.0" prefWidth="236.0" showTickLabels="true" showTickMarks="true" stylesheets="@../content/sliderStyle.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="562.0" prefWidth="1272.0" style="-fx-background-color: #87CEFA;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProduitDetailsController">
+    <stylesheets>
+        <URL value="@/content/produitdetails.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="305.0" layoutY="25.0" prefHeight="49.0" prefWidth="322.0" text="Details Produit" textFill="#1b08ee">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="description" editable="false" layoutX="847.0" layoutY="466.0" />
+      <JFXTextField fx:id="nom" editable="false" layoutX="180.0" layoutY="368.0" />
+      <JFXTextField fx:id="marque" editable="false" layoutX="189.0" layoutY="466.0" />
+      <JFXTextField fx:id="remise" editable="false" layoutX="847.0" layoutY="375.0" />
+      <JFXTextField fx:id="prix" editable="false" layoutX="528.0" layoutY="369.0" prefHeight="25.0" prefWidth="119.0" />
+      <JFXTextField fx:id="date" editable="false" layoutX="540.0" layoutY="466.0" />
+      <Label layoutX="103.0" layoutY="372.0" text="Nom" textFill="FORESTGREEN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="367.0" text="Prix" textFill="FORESTGREEN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="723.0" layoutY="366.0" text="Remise" textFill="FORESTGREEN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="464.0" text="Marque" textFill="FORESTGREEN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="464.0" text="date de fabrication" textFill="FORESTGREEN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="722.0" layoutY="464.0" text="Description" textFill="FORESTGREEN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="retour" layoutX="53.0" layoutY="25.0" onAction="#retour" prefHeight="44.0" prefWidth="92.0" text="Retour" textFill="#1100ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="17.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/Retour.gif" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="acheter" layoutX="755.0" layoutY="36.0" onAction="#acheter" prefHeight="56.0" prefWidth="135.0" text="Acheter" textFill="#18c324">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="673.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/customer-testimonials.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagex" fitHeight="263.0" fitWidth="572.0" layoutX="341.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="3.0" layoutY="510.0" prefHeight="113.0" prefWidth="1272.0">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="26.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/240-f-95414829-0sttztfcb94pbomkdhjvk5g4hvo46jpx.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="160.0" layoutX="247.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/0.file5a2649e4d005d.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="522.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/an.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="753.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../content/arett.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="ajoutdrag" fitHeight="218.0" fitWidth="270.0" layoutX="25.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/dragndrop.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="79.0" prefHeight="30.0" prefWidth="270.0" text="Drop Image Ici Pour L'Ajouter Au Panier">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

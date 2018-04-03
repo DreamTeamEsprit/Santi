@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane1" prefHeight="575.0" prefWidth="756.0" style="-fx-background-color: #008080;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EspaceAdminController">
+    <stylesheets>
+        <URL value="@/content/espaceadmin.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="65.0" fitWidth="350.0" layoutX="293.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/espace_admin.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="85.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../content/icone_admin.png" />
+         </image>
+      </ImageView>
+      <JFXDrawer fx:id="drawer" cache="true" cacheHint="SPEED" defaultDrawerSize="250.0" layoutX="-2.0" maxHeight="609.0" maxWidth="250.0" minHeight="600.0" minWidth="41.0" prefHeight="609.0" prefWidth="197.0" />
+      <JFXHamburger fx:id="ham1" cache="true" cacheHint="SPEED" focusTraversable="true" layoutX="140.0" layoutY="14.0" prefHeight="65.0" prefWidth="80.0" stylesheets="@../content/styleHamburger.css">
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXHamburger>
+      <Pane layoutX="266.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" prefHeight="48.0" prefWidth="166.0" text="Produits" textFill="RED">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="nbrprod" layoutX="24.0" layoutY="107.0" onAction="#nbrprod" prefHeight="54.0" prefWidth="153.0" text="Consulter" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="542.0" layoutY="150.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="10.0" layoutY="14.0" prefHeight="65.0" prefWidth="180.0" text="Categories" textFill="#3c08f8">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="nbrcat" layoutX="39.0" layoutY="109.0" onAction="#nbrcat" text="Consulter" textFill="#3701fc">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="266.0" layoutY="386.0" prefHeight="200.0" prefWidth="476.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" prefHeight="65.0" prefWidth="430.0" text="Chiffres D'Affaires" textFill="#b0e809">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="chiffreaffaire" layoutX="115.0" layoutY="112.0" onAction="#chiffreaffaire" prefHeight="25.0" prefWidth="248.0" text="Consulter" textFill="#d0f805">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Separator layoutX="501.0" layoutY="150.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Separator layoutX="266.0" layoutY="366.0" prefHeight="0.0" prefWidth="476.0" />
+   </children>
+</AnchorPane>

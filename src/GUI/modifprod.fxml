@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="662.0" style="-fx-background-color: #008080;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifprodController">
+    <stylesheets>
+        <URL value="@/content/ajouterprod.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="199.0" layoutY="14.0" text="Modifier Produit">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Button fx:id="retour" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="75.0" text="Retour" />
+      <Label layoutX="61.0" layoutY="96.0" text="Categorie" />
+      <Label layoutX="61.0" layoutY="145.0" text="Libelle" />
+      <Label layoutX="61.0" layoutY="194.0" text="Description" />
+      <Label layoutX="61.0" layoutY="247.0" text="Prix" />
+      <Label layoutX="61.0" layoutY="305.0" text="Remise" />
+      <Label layoutX="343.0" layoutY="96.0" text="Quantite Disponible" />
+      <Label layoutX="343.0" layoutY="145.0" text="Prix Livraison" />
+      <Label layoutX="343.0" layoutY="194.0" text="Marque" />
+      <Label layoutX="343.0" layoutY="239.0" text="Photo" />
+      <Label layoutX="333.0" layoutY="305.0" text="Date De Fabrication" />
+      <TextField fx:id="libelle" layoutX="133.0" layoutY="141.0" />
+      <TextField fx:id="description" layoutX="133.0" layoutY="190.0" />
+      <TextField fx:id="marque" layoutX="462.0" layoutY="190.0" />
+      <TextField fx:id="prix" layoutX="133.0" layoutY="244.0" />
+      <TextField fx:id="remise" layoutX="133.0" layoutY="301.0" />
+      <TextField fx:id="quantiteDispo" layoutX="462.0" layoutY="92.0" />
+      <TextField fx:id="prixLivraison" layoutX="462.0" layoutY="141.0" />
+      <Button fx:id="modifier" layoutX="206.0" layoutY="417.0" mnemonicParsing="false" onAction="#ModifierProduit" prefHeight="45.0" prefWidth="203.0" text="Modifier">
+         <font>
+            <Font size="23.0" />
+         </font></Button>
+      <Button fx:id="photo" layoutX="462.0" layoutY="243.0" mnemonicParsing="false" onAction="#addImage" prefHeight="25.0" prefWidth="149.0" text="Choisir Photo" />
+      <Label fx:id="fileimage" layoutX="196.0" layoutY="364.0" prefHeight="45.0" prefWidth="361.0" visible="false" />
+      <JFXDatePicker fx:id="dateFabrication" layoutX="462.0" layoutY="300.0" />
+      <JFXComboBox fx:id="catgorie" layoutX="133.0" layoutY="92.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
